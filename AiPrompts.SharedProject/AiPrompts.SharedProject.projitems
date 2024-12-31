@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects Condition="'$(MSBuildVersion)' == '' Or '$(MSBuildVersion)' &lt; '16.0'">$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>f039cd17-9013-4370-8f46-1d406b983332</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>AiPrompts.SharedProject</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="$(MSBuildThisFileDirectory)C# HttpServer.BatchUploader AI Prompt.txt" />
+    <Content Include="$(MSBuildThisFileDirectory)C# Roslyn Ai Tokenizer AI Prompt.txt" />
+    <Content Include="$(MSBuildThisFileDirectory)C# Pascale Language Lexer AI Prompt.txt" />
+    <Content Include="$(MSBuildThisFileDirectory)C# Python Lexer AI Prompt.txt" />
+    <Content Include="$(MSBuildThisFileDirectory)C# Tiny Language Lexer AI Prompt.txt" />
+  </ItemGroup>
+</Project>

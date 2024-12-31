@@ -4,15 +4,14 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 17.12.35527.113
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{E51CD307-88F9-4A53-8F51-68CF14CFD241}"
-	ProjectSection(SolutionItems) = preProject
-		C# Roslyn Ai Tokenizer AI Prompt.txt = C# Roslyn Ai Tokenizer AI Prompt.txt
-		Pascale Language Lexer AI Prompt.txt = Pascale Language Lexer AI Prompt.txt
-		Python Lexer AI Prompt.txt = Python Lexer AI Prompt.txt
-		Tiny Language Lexer AI Prompt.txt = Tiny Language Lexer AI Prompt.txt
-	EndProjectSection
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "AiPrompts.SharedProject", "AiPrompts.SharedProject\AiPrompts.SharedProject.shproj", "{F039CD17-9013-4370-8F46-1D406B983332}"
 EndProject
 Global
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		AiPrompts.SharedProject\AiPrompts.SharedProject.projitems*{f039cd17-9013-4370-8f46-1d406b983332}*SharedItemsImports = 13
 	EndGlobalSection
 EndGlobal
