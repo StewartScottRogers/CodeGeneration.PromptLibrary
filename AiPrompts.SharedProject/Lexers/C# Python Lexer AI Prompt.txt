@@ -1,11 +1,13 @@
 Create complete code in a .NET Solution. in Visual Studio.
 using C# and net9.0.
-Write a compete solution that can be compiled and execute with out additional coding required. 
+Write a compete solution that can be compiled and executed without additional coding required.
 
 Create all Classes in separate files. 
 Create all Interfaces in separate files. 
 Create all Enumerations in separate files. 
 Create all Records in separate files. 
+
+Use minimal API for all code when possible.
 
 Use only explicit Types.
 use only Lower Camel Case for Local Variables.
@@ -31,7 +33,6 @@ Name all Classes and Interfaces with either a prefix or a postfix if the underly
 Write all code for a business analyst or entry level programmer to read with comments for anything complex that might not be understood. 
 
 ------------------------------------------------------------------------------------------------------------------------------------------------
-
 Create a Class Library to Lexer the Grammar listed below.
 
 Generate a Lexer for the Abstract Syntax Tree.

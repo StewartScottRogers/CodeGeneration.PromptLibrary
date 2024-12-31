@@ -1,11 +1,13 @@
 Create complete code in a .NET Solution. in Visual Studio.
 using C# and net9.0.
-Write a compete solution that can be compiled and execute with out additional coding required. 
+Write a compete solution that can be compiled and executed without additional coding required.
 
 Create all Classes in separate files. 
 Create all Interfaces in separate files. 
 Create all Enumerations in separate files. 
 Create all Records in separate files. 
+
+Use minimal API for all code when possible.
 
 Use only explicit Types.
 use only Lower Camel Case for Local Variables.
@@ -31,9 +33,10 @@ Name all Classes and Interfaces with either a prefix or a postfix if the underly
 Write all code for a business analyst or entry level programmer to read with comments for anything complex that might not be understood. 
 
 ------------------------------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------------------------
 
 Create a Http Server as an executable that can handle multiple requests at the same time.
-Create a Batch Up-loader as an executable windows forms application that can select an upload multiple files at the same time.
-Create a Class Library that the Http Server can use to persist the uploaded files  to Azure Blobs with a file name derived from a UTC Date and Time that is human readable. Place the files in a folder structure by year and then month.
+Create a Class Library '*.UnitLibrary' that the Http Server can use to persist the uploaded files to Azure Blobs with a file name derived from a UTC Date and Time that is human readable. Place the files in a folder structure by year and then month.
+Create a Unit Test '*.UnitTests' for the Class Library '*.UnitLibrary'  that can be run in a CI/CD pipeline.
 
 
