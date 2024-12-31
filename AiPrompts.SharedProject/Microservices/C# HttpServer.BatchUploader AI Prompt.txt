@@ -24,16 +24,18 @@ Use only streams for all I/O.
 
 Use only the Microsoft's Unit Test framework.
 Use only complex data as input in all Unit Tests.
+Use Readonly Member Variables when possible.
+Do not prefix member variables with an underscore.
 
-Name all local variables, member variables, Properties, and Methods with complete nouns using the underlying type's name if possible. 
-Name all local variables, member variables, Properties, and Methods with either a prefix or a postfix if the underlying noun needs more clarification.
+Name all Local Variables, Member Variables, Properties, and Methods with complete nouns using the underlying type's name if possible. 
+Name all Local Variables, Member Variables, Properties, and Methods with either a prefix or a postfix if the underlying noun needs more clarification.
 Name all Classes and Interfaces with either a prefix or a postfix if the underlying noun needs more clarification.
 
 
 Write all code for a business analyst or entry level programmer to read with comments for anything complex that might not be understood. 
 
 ------------------------------------------------------------------------------------------------------------------------------------------------
-------------------------------------------------------------------------------------------------------------------------------------------------
+
 
 Create a Http Server as an executable that can handle multiple requests at the same time.
 Create a Class Library '*.UnitLibrary' that the Http Server can use to persist the uploaded files to Azure Blobs with a file name derived from a UTC Date and Time that is human readable. Place the files in a folder structure by year and then month.

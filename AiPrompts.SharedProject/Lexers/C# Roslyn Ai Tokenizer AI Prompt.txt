@@ -1,26 +1,46 @@
-Create a .NET Solution.
-Write a complet solution that can be compiled and execute with out additional coding required. 
+Create complete code in a .NET Solution. in Visual Studio.
+using C# and net9.0.
+Write a compete solution that can be compiled and executed without additional coding required.
+
 Create all Classes in separate files. 
 Create all Interfaces in separate files. 
-Create all Enums in separate files. 
+Create all Enumerations in separate files. 
 Create all Records in separate files. 
 
-Use Fluent Interfaces if possible.
+Use minimal API for all code when possible.
 
-Write all code for a business analyst or entry level programmer to read with comments for anything complex that they might not understand. 
+Use only explicit Types.
+use only Lower Camel Case for Local Variables.
+Use only Upper Camel Case for Member Variables.
+Use only Upper Camel Case for Class Properties.
+Use only Upper Camel Case for Class Names.
 
-using C# net8.0 and the C# Roslyn Compiler to create an Abstract Syntax Tree that includes all metadata.
+Use only the Microsoft Basic Component Library.
+Use only explicit Types.
+Use only Fluent Interfaces if possible.
+Use only LINQ if possible.
+Use only 'foreach' statements in place of 'for' statements.
+Use only streams for all I/O.
+
+Use only the Microsoft's Unit Test framework.
+Use only complex data as input in all Unit Tests.
+Use Readonly Member Variables when possible.
+Do not prefix member variables with an underscore.
+
+Name all Local Variables, Member Variables, Properties, and Methods with complete nouns using the underlying type's name if possible. 
+Name all Local Variables, Member Variables, Properties, and Methods with either a prefix or a postfix if the underlying noun needs more clarification.
+Name all Classes and Interfaces with either a prefix or a postfix if the underlying noun needs more clarification.
+
+
+Write all code for a business analyst or entry level programmer to read with comments for anything complex that might not be understood. 
+
+------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+Use the C# Roslyn Compiler to create an Abstract Syntax Tree that includes all metadata.
 Generate a Abstract Syntax Tree Pretty Printer.
 Generate an AST to code Reflow Generator in order to build and execute the generated code using Roslyn
 Generate 25 Unit Tests for lexing the Abstract Syntax Tree.
 
 Use the Abstract Syntax Tree Pretty Printer in the Unit Tests to display the Abstract Syntax Tree.
 Use the Abstract Syntax Tree Reflow Generator in the Unit Tests to execute the generated code.
-
-Use only the Microsoft's Unit Test framework.
-Use only complex code as input in all Unit Tests.
-Use only the Microsoft Basic Component Library.
-Use only explicit Types.
-
-name all variables with complete nouns using the underlying type's name if possible. 
-name all variables with either a prefix or a postfix if the underlying noun needs more clarification.
