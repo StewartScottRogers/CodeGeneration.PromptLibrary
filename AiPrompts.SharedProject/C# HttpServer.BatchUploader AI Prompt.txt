@@ -11,6 +11,7 @@ Use only the Microsoft Basic Component Library.
 Use only explicit Types.
 Use only Fluent Interfaces if possible.
 Use only LINQ if possible.
+Use only 'foreach' statements in place of 'for' statements
 
 Use only the Microsoft's Unit Test framework.
 Use only complex code as input in all Unit Tests.
