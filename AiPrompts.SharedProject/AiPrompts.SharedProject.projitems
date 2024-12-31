@@ -9,10 +9,15 @@
     <Import_RootNamespace>AiPrompts.SharedProject</Import_RootNamespace>
   </PropertyGroup>
   <ItemGroup>
-    <Content Include="$(MSBuildThisFileDirectory)C# HttpServer.BatchUploader AI Prompt.txt" />
-    <Content Include="$(MSBuildThisFileDirectory)C# Roslyn Ai Tokenizer AI Prompt.txt" />
-    <Content Include="$(MSBuildThisFileDirectory)C# Pascale Language Lexer AI Prompt.txt" />
-    <Content Include="$(MSBuildThisFileDirectory)C# Python Lexer AI Prompt.txt" />
-    <Content Include="$(MSBuildThisFileDirectory)C# Tiny Language Lexer AI Prompt.txt" />
+    <Content Include="$(MSBuildThisFileDirectory)C# Solutions AI Prompt.txt" />
+    <Content Include="$(MSBuildThisFileDirectory)Microservices\C# HttpServer.BatchUploader AI Prompt.txt" />
+    <Content Include="$(MSBuildThisFileDirectory)Lexers\C# Roslyn Ai Tokenizer AI Prompt.txt" />
+    <Content Include="$(MSBuildThisFileDirectory)Lexers\C# Pascale Language Lexer AI Prompt.txt" />
+    <Content Include="$(MSBuildThisFileDirectory)Lexers\C# Python Lexer AI Prompt.txt" />
+    <Content Include="$(MSBuildThisFileDirectory)Lexers\C# Tiny Language Lexer AI Prompt.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="$(MSBuildThisFileDirectory)Lexers\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Microservices\" />
   </ItemGroup>
 </Project>
