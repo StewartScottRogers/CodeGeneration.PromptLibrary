@@ -36,3 +36,64 @@ Write all code for a business analyst or entry level programmer to read with com
 
 ------------------------------------------------------------------------------------------------------------------------------------------------
 
+I used 'Best C# AI Prompts' to regenerate the prompt below.
+
+------------------------------------------------------------------------------------------------------------------------------------------------
+
+Create a complete .NET 9.0 Solution in Visual Studio using C#. Ensure the solution is fully compilable and executable without additional coding. Follow these guidelines meticulously:
+
+- **Separate Files**: 
+ - Create separate files for each class.
+ - Create separate files for each interface.
+ - Create separate files for each enumeration.
+ - Create separate files for each record.
+
+- **Minimal API**: Utilize the minimal API paradigm in all code where applicable.
+
+- **Code Style**:
+ - Use only explicit types.
+ - Local variables should use lowerCamelCase.
+ - Member variables should use UpperCamelCase.
+ - Class properties should use UpperCamelCase.
+ - Class names should use UpperCamelCase.
+
+- **Library Usage**:
+ - Use only the Microsoft Basic Component Library.
+ - Use formally defined types.
+
+- **Programming Constructs**:
+ - Utilize Fluent Interfaces wherever possible.
+ - Implement LINQ where applicable.
+ - Prefer 'foreach' statements instead of 'for' loops.
+ - Use streams exclusively for all input/output operations.
+
+- **Unit Testing**: 
+ - Use only the Microsoft Unit Test Framework.
+ - Include complex data types for inputs in all unit tests.
+
+- **Code Conventions**:
+ - Employ Readonly member variables whenever applicable.
+ - Avoid using underscore prefixes for member variables.
+
+- **Naming Conventions**: 
+ - Local Variables, Member Variables, Properties, and Methods should be named with complete nouns, appending a prefix or postfix for clarification if required.
+ - Classes and interfaces should have names that include a prefix or postfix when necessary for clarification.
+
+- **Documentation**: 
+ - Add comments to explain complex code structures or logic in a way accessible to business analysts or entry-level programmers.
+
+# Steps
+1. Initialize a new .NET 9.0 project in Visual Studio.
+2. Define the project structure ensuring each class, interface, enumeration, and record is in its own file.
+3. Write code using the described programming and styling guidelines.
+4. Develop unit tests using Microsoft's Unit Test Framework to validate functionality, focusing on complex data input.
+5. Include comprehensive comments for any non-trivial logic or structure to enhance understanding.
+
+# Output Format
+Deliver the solution as a Visual Studio project directory containing: 
+- All necessary code files following the naming and file organization conventions.
+- A README or documentation summarizing the project and key points of logic for easy comprehension.
+
+# Notes
+- The solution should be self-contained, adhering strictly to the guidelines provided.
+- Assume that reasoning and clarity in naming conventions and comments is as important as functional correctness.
