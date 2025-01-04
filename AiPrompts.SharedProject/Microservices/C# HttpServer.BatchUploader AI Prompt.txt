@@ -60,9 +60,4 @@ Deliver the solution as a Visual Studio project directory containing:
 
 ------------------------------------------------------------------------------------------------------------------------------------------------
 
-# Solution Requirement 
-1. Create a Http Server as an executable that can handle multiple requests at the same time.
-2. The Http Server should accept a post and uploaded files to Azure Blobs with a file name derived from a UTC Date and Time that is human readable. Place the files in a folder structure by year and then month.
-
-
-
+Create a Web Server using a minimal API that accepts post as though it was an FTP server and save it to an Azure Blob with a date time stamp that will be unique.
