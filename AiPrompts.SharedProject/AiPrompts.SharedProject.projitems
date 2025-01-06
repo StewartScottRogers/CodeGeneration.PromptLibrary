@@ -9,6 +9,7 @@
     <Import_RootNamespace>AiPrompts.SharedProject</Import_RootNamespace>
   </PropertyGroup>
   <ItemGroup>
+    <Content Include="$(MSBuildThisFileDirectory)Arm Source Code AI Prompt.txt" />
     <Content Include="$(MSBuildThisFileDirectory)C# Solutions AI Prompt.txt" />
     <Content Include="$(MSBuildThisFileDirectory)Microservices\C# HttpServer.BatchUploader AI Prompt.txt" />
     <Content Include="$(MSBuildThisFileDirectory)Lexers\C# Roslyn Ai Tokenizer AI Prompt.txt" />
