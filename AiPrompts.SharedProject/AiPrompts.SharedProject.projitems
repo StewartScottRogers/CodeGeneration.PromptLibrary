@@ -15,6 +15,7 @@
     <Content Include="$(MSBuildThisFileDirectory)Lexers\C# Pascale Language Lexer AI Prompt.txt" />
     <Content Include="$(MSBuildThisFileDirectory)Lexers\C# Python Lexer AI Prompt.txt" />
     <Content Include="$(MSBuildThisFileDirectory)Lexers\C# Tiny Language Lexer AI Prompt.txt" />
+    <Content Include="$(MSBuildThisFileDirectory)Persistence\C# lComplete Library to provides X-base Functionality.txt" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="$(MSBuildThisFileDirectory)Lexers\" />
