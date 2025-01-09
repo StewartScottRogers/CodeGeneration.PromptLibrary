@@ -11,6 +11,7 @@
   <ItemGroup>
     <Content Include="$(MSBuildThisFileDirectory)ARM Assembly Code AI Prompt.txt" />
     <Content Include="$(MSBuildThisFileDirectory)C# Solutions AI Prompt.txt" />
+    <Content Include="$(MSBuildThisFileDirectory)DataStructures\ARM Assembly Code Linked List Data Structure AI Prompt.txt" />
     <Content Include="$(MSBuildThisFileDirectory)DataStructures\ARM Assembly Code Stack Data Structure AI Prompt.txt" />
     <Content Include="$(MSBuildThisFileDirectory)Microservices\C# HttpServer.BatchUploader AI Prompt.txt" />
     <Content Include="$(MSBuildThisFileDirectory)Lexers\C# Roslyn Ai Tokenizer AI Prompt.txt" />
