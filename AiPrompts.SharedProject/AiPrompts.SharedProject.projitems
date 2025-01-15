@@ -10,7 +10,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Content Include="$(MSBuildThisFileDirectory)ARM Assembly Code AI Prompt.txt" />
-    <Content Include="$(MSBuildThisFileDirectory)C# Solutions AI Prompt.txt" />
+    <Content Include="$(MSBuildThisFileDirectory)Libraries\C# Solutions POSIX IO AI Prompt.txt" />
     <Content Include="$(MSBuildThisFileDirectory)DataStructures\ARM Assembly Code Cache Coherent Buffer Manager AI Prompt.txt" />
     <Content Include="$(MSBuildThisFileDirectory)DataStructures\ARM Assembly Code Linked List Data Structure AI Prompt.txt" />
     <Content Include="$(MSBuildThisFileDirectory)DataStructures\ARM Assembly Code Heap Data Structure AI Prompt.txt" />
@@ -29,5 +29,6 @@
   <ItemGroup>
     <Folder Include="$(MSBuildThisFileDirectory)Lexers\" />
     <Folder Include="$(MSBuildThisFileDirectory)Microservices\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Libraries\" />
   </ItemGroup>
 </Project>
