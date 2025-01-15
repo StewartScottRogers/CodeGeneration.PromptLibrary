@@ -54,6 +54,12 @@ Deliver the solution as a Visual Studio project directory containing:
 - The solution should be self-contained, adhering strictly to the guidelines provided.
 - Assume that reasoning and clarity in naming conventions and comments is as important as functional correctness.
 
-----------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------
 
-# Example Prompt
+# Example Prompt	
+
+	** Cache Coherent Buffer Manager
+	** Implement Dynamic Buffer Management.
+	** Implement Snoopy protocol
+	** Implement Multi-core system support.
+	** Implement Cache coherence protocol messages.
