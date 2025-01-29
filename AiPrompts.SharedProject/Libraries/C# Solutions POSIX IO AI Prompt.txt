@@ -7,6 +7,7 @@ Create a complete .NET 9.0 Solution in Visual Studio using C#. Ensure the soluti
  - Create separate files for each record.
 
 - **Code Style**:
+ - Never use leading underscores for any variable.
  - Use only explicit types.
  - Local variables should use lowerCamelCase.
  - Member variables should use UpperCamelCase.
@@ -27,7 +28,7 @@ Create a complete .NET 9.0 Solution in Visual Studio using C#. Ensure the soluti
  - Implement LINQ where applicable.
  - Prefer 'foreach' statements instead of 'for' loops.
  - Use streams for all input/output operations.
- - Favor use of Tuples for returning multiple values from a method rather than Classes, Structs, Or Records
+ - Favor use of Tuples for returning multiple values from a method rather than Data Transport Objects, Structs, Or Records
 
 - **Unit Testing**: 
  - Use only the Microsoft Unit Test Framework.
@@ -36,7 +37,7 @@ Create a complete .NET 9.0 Solution in Visual Studio using C#. Ensure the soluti
 
 - **Code Conventions**:
  - Employ Readonly member variables whenever applicable.
- - Avoid using underscore prefixes for member variables.
+ - Never use underscore prefixes for member variables.
 
 - **Naming Conventions**: 
  - Local Variables, Member Variables, Properties, and Methods should be named with complete nouns, appending a prefix or postfix for clarification if required.
@@ -62,11 +63,12 @@ Deliver the solution as a Visual Studio project directory containing:
 - Assume that reasoning and clarity in naming conventions and comments is as important as functional correctness.
 - The solution should be fully executable and compilable without any additional coding.
 
-
 ----------------------------------------------------------------------------------------------------------------------------
 
-# Example Prompt
-  Create an in-memory library that simulates POSIX I/O file descriptors and their associated system calls in C. This library should include the following functionalities:
+
+# Prompt
+ 
+  Create an in-memory library that simulates POSIX I/O file descriptors and their associated system calls. This library should include the following functionalities:
 
 - **File Descriptors**: Implement abstractions for accessing files, devices, and I/O streams using standard file descriptors. The library should handle the standard file descriptors: `0` for `stdin`, `1` for `stdout`, and `2` for `stderr`.
 
