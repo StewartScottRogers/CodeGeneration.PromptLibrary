@@ -22,6 +22,7 @@ Create a complete .NET 9.0 Solution in Visual Studio using C#. Ensure the soluti
  - Implement LINQ where applicable.
  - Prefer 'foreach' statements instead of 'for' loops.
  - Use streams exclusively for all input/output operations.
+ - Favor use of Tuples for returning multiple values from a method rather than Classes, Structs, Or Records
 
 - **Unit Testing**: 
  - Use only the Microsoft Unit Test Framework.
@@ -53,7 +54,6 @@ Deliver the solution as a Visual Studio project directory containing:
 # Notes
 - The solution should be self-contained, adhering strictly to the guidelines provided.
 - Assume that reasoning and clarity in naming conventions and comments is as important as functional correctness.
-
 ----------------------------------------------------------------------------------------------------------------------------
 
 # Example Prompt

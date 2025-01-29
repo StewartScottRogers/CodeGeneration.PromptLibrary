@@ -10,6 +10,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Content Include="$(MSBuildThisFileDirectory)ARM Assembly Code AI Prompt.txt" />
+    <Content Include="$(MSBuildThisFileDirectory)C# Solutions AI Prompt.txt" />
     <Content Include="$(MSBuildThisFileDirectory)DataStructures\C# Solutions Merge Sorted Lists AI Prompt.txt" />
     <Content Include="$(MSBuildThisFileDirectory)Libraries\C# Solutions POSIX IO AI Prompt.txt" />
     <Content Include="$(MSBuildThisFileDirectory)DataStructures\ARM Assembly Code Cache Coherent Buffer Manager AI Prompt.txt" />
