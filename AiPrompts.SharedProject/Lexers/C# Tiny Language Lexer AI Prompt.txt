@@ -6,14 +6,18 @@ Create a complete .NET 9.0 Solution in Visual Studio using C#. Ensure the soluti
  - Create separate files for each enumeration.
  - Create separate files for each record.
 
-- **Minimal API**: Utilize the minimal API paradigm in all code where applicable.
-
 - **Code Style**:
+ - Never use leading underscores for any variable.
  - Use only explicit types.
  - Local variables should use lowerCamelCase.
  - Member variables should use UpperCamelCase.
  - Class properties should use UpperCamelCase.
  - Class names should use UpperCamelCase.
+ - Interface names should use UpperCamelCase.
+ - Enumeration names should use UpperCamelCase.
+ - Record names should use UpperCamelCase.
+ - Method names should use UpperCamelCase.
+ - All Tuples should be named and Post Fixed with the word Tuple.
 
 - **Library Usage**:
  - Use only the Microsoft Basic Component Library.
@@ -23,15 +27,17 @@ Create a complete .NET 9.0 Solution in Visual Studio using C#. Ensure the soluti
  - Utilize Fluent Interfaces wherever possible.
  - Implement LINQ where applicable.
  - Prefer 'foreach' statements instead of 'for' loops.
- - Use streams exclusively for all input/output operations.
+ - Use streams for all input/output operations.
+ - Favor use of Tuples for returning multiple values from a method rather than Data Transport Objects, Structs, Or Records
 
 - **Unit Testing**: 
  - Use only the Microsoft Unit Test Framework.
+ - Do not use XUnit or NUnit.
  - Include complex data types for inputs in all unit tests.
 
 - **Code Conventions**:
  - Employ Readonly member variables whenever applicable.
- - Avoid using underscore prefixes for member variables.
+ - Never use underscore prefixes for member variables.
 
 - **Naming Conventions**: 
  - Local Variables, Member Variables, Properties, and Methods should be named with complete nouns, appending a prefix or postfix for clarification if required.
@@ -55,9 +61,9 @@ Deliver the solution as a Visual Studio project directory containing:
 # Notes
 - The solution should be self-contained, adhering strictly to the guidelines provided.
 - Assume that reasoning and clarity in naming conventions and comments is as important as functional correctness.
+- The solution should be fully executable and compilable without any additional coding.
 
-------------------------------------------------------------------------------------------------------------------------------------------------
-
+----------------------------------------------------------------------------------------------------------------------------
 
 Create a Class Library to Lexer the Grammar listed below.
 

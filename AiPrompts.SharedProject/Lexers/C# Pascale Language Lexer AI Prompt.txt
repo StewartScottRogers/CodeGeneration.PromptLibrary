@@ -1,42 +1,69 @@
-Create complete code in a .NET Solution. in Visual Studio.
-using C# and net9.0.
-Write a compete solution that can be compiled and executed without additional coding required.
+Create a complete .NET 9.0 Solution in Visual Studio using C#. Ensure the solution is fully compilable and executable without additional coding. Follow these guidelines meticulously:
 
-Create all Classes in separate files. 
-Create all Interfaces in separate files. 
-Create all Enumerations in separate files. 
-Create all Records in separate files. 
+- **Separate Files**: 
+ - Create separate files for each class.
+ - Create separate files for each interface.
+ - Create separate files for each enumeration.
+ - Create separate files for each record.
 
-Use minimal API for all code when possible.
+- **Code Style**:
+ - Never use leading underscores for any variable.
+ - Use only explicit types.
+ - Local variables should use lowerCamelCase.
+ - Member variables should use UpperCamelCase.
+ - Class properties should use UpperCamelCase.
+ - Class names should use UpperCamelCase.
+ - Interface names should use UpperCamelCase.
+ - Enumeration names should use UpperCamelCase.
+ - Record names should use UpperCamelCase.
+ - Method names should use UpperCamelCase.
+ - All Tuples should be named and Post Fixed with the word Tuple.
 
-Use only explicit Types.
-use only Lower Camel Case for Local Variables.
-Use only Upper Camel Case for Member Variables.
-Use only Upper Camel Case for Class Properties.
-Use only Upper Camel Case for Class Names.
+- **Library Usage**:
+ - Use only the Microsoft Basic Component Library.
+ - Use formally defined types.
 
-Use only the Microsoft Basic Component Library.
-Use only explicit Types.
-Use only Fluent Interfaces if possible.
-Use only LINQ if possible.
-Use only 'foreach' statements in place of 'for' statements.
-Use only streams for all I/O.
+- **Programming Constructs**:
+ - Utilize Fluent Interfaces wherever possible.
+ - Implement LINQ where applicable.
+ - Prefer 'foreach' statements instead of 'for' loops.
+ - Use streams for all input/output operations.
+ - Favor use of Tuples for returning multiple values from a method rather than Data Transport Objects, Structs, Or Records
 
-Use only the Microsoft's Unit Test framework.
-Use only complex data as input in all Unit Tests.
-Use Readonly Member Variables when possible.
-Do not prefix member variables with an underscore.
+- **Unit Testing**: 
+ - Use only the Microsoft Unit Test Framework.
+ - Do not use XUnit or NUnit.
+ - Include complex data types for inputs in all unit tests.
 
-Name all Local Variables, Member Variables, Properties, and Methods with complete nouns using the underlying type's name if possible. 
-Name all Local Variables, Member Variables, Properties, and Methods with either a prefix or a postfix if the underlying noun needs more clarification.
-Name all Classes and Interfaces with either a prefix or a postfix if the underlying noun needs more clarification.
+- **Code Conventions**:
+ - Employ Readonly member variables whenever applicable.
+ - Never use underscore prefixes for member variables.
 
+- **Naming Conventions**: 
+ - Local Variables, Member Variables, Properties, and Methods should be named with complete nouns, appending a prefix or postfix for clarification if required.
+ - Classes and interfaces should have names that include a prefix or postfix when necessary for clarification.
 
-Write all code for a business analyst or entry level programmer to read with comments for anything complex that might not be understood. 
+- **Documentation**: 
+ - Add comments to explain complex code structures or logic in a way accessible to business analysts or entry-level programmers.
 
-------------------------------------------------------------------------------------------------------------------------------------------------
+# Steps
+1. Initialize a new .NET 9.0 project in Visual Studio.
+2. Define the project structure ensuring each class, interface, enumeration, and record is in its own file.
+3. Write code using the described programming and styling guidelines.
+4. Develop unit tests using Microsoft's Unit Test Framework to validate functionality, focusing on complex data input.
+5. Include comprehensive comments for any non-trivial logic or structure to enhance understanding.
 
+# Output Format
+Deliver the solution as a Visual Studio project directory containing: 
+- All necessary code files following the naming and file organization conventions.
+- A README or documentation summarizing the project and key points of logic for easy comprehension.
 
+# Notes
+- The solution should be self-contained, adhering strictly to the guidelines provided.
+- Assume that reasoning and clarity in naming conventions and comments is as important as functional correctness.
+- The solution should be fully executable and compilable without any additional coding.
+
+----------------------------------------------------------------------------------------------------------------------------
 
 Create a Class Library to Lexer the Grammar listed below.
 
