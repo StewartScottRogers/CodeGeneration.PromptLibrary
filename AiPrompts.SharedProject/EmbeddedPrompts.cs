@@ -16,5 +16,12 @@ namespace AiPrompts
                 if (embeddedResource.EndsWith(endsWith))
                     yield return embeddedResource;
         }
+
+        public static string GetPrompt(string path)
+        {
+            using (var stream = Assembly.GetExecutingAssembly().GetManifestResourceStream(path))
+            using (var reader = new System.IO.StreamReader(stream))
+                return reader.ReadToEnd();
+        }
     }
 }
