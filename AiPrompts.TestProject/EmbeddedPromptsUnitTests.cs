@@ -8,7 +8,7 @@ namespace AiPrompts
     public sealed class GetAllEmbeddedPrompts
     {
         [TestMethod]
-        public void GetAllPathsUnitTests()
+        public void GetAllPathsUnitTest()
         {
 
             IEnumerable<string> embeddedPrompts
