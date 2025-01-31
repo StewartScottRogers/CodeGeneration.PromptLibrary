@@ -3,9 +3,10 @@
   <PropertyGroup>
     <TargetFramework>net9.0</TargetFramework>
     <LangVersion>latest</LangVersion>
-    <ImplicitUsings>enable</ImplicitUsings>
-    <Nullable>enable</Nullable>
     <UseVSTest>true</UseVSTest>
+    <RootNamespace>AiPrompts</RootNamespace>
   </PropertyGroup>
+
+  <Import Project="..\AiPrompts.SharedProject\AiPrompts.SharedProject.projitems" Label="Shared" />
 
 </Project>

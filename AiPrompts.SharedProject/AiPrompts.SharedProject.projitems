@@ -6,28 +6,31 @@
     <SharedGUID>f039cd17-9013-4370-8f46-1d406b983332</SharedGUID>
   </PropertyGroup>
   <PropertyGroup Label="Configuration">
-    <Import_RootNamespace>AiPrompts.SharedProject</Import_RootNamespace>
+    <Import_RootNamespace>AiPrompts</Import_RootNamespace>
   </PropertyGroup>
   <ItemGroup>
-    <EmbeddedResource Include="$(MSBuildThisFileDirectory)ProjectPrompts\ARM Assembly Code AI Prompt.txt" />
-    <EmbeddedResource Include="$(MSBuildThisFileDirectory)ProjectPrompts\C# Solutions AI Prompt.txt" />
-    <EmbeddedResource Include="$(MSBuildThisFileDirectory)ProblemPrompts\DataStructures\Merge Sorted Lists AI Prompt.txt" />
-    <EmbeddedResource Include="$(MSBuildThisFileDirectory)ProblemPrompts\Libraries\Solutions POSIX IO AI Prompt.txt" />
-    <EmbeddedResource Include="$(MSBuildThisFileDirectory)ProblemPrompts\DataStructures\Cache Coherent Buffer Manager AI Prompt.txt" />
-    <EmbeddedResource Include="$(MSBuildThisFileDirectory)ProblemPrompts\DataStructures\Heap Data Structure AI Prompt.txt" />
-    <EmbeddedResource Include="$(MSBuildThisFileDirectory)ProblemPrompts\DataStructures\Stack Data Structure AI Prompt.txt" />
-    <EmbeddedResource Include="$(MSBuildThisFileDirectory)ProblemPrompts\DataStructures\Linked List Data Structure AI Prompt.txt" />
-    <EmbeddedResource Include="$(MSBuildThisFileDirectory)ProblemPrompts\Microservices\HttpServer.BatchUploader AI Prompt.txt" />
-    <EmbeddedResource Include="$(MSBuildThisFileDirectory)ProblemPrompts\Lexers\Roslyn Ai Tokenizer AI Prompt.txt" />
-    <EmbeddedResource Include="$(MSBuildThisFileDirectory)ProblemPrompts\Lexers\Pascale Language Lexer AI Prompt.txt" />
-    <EmbeddedResource Include="$(MSBuildThisFileDirectory)ProblemPrompts\Lexers\Python Lexer AI Prompt.txt" />
-    <EmbeddedResource Include="$(MSBuildThisFileDirectory)ProblemPrompts\Lexers\Tiny Language Lexer AI Prompt.txt" />
-    <EmbeddedResource Include="$(MSBuildThisFileDirectory)ProblemPrompts\Persistence\lComplete Library to provides X-base Functionality.txt" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)SolutionPrompts\ARM Assembly Code AI Prompt.Solution.txt" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)SolutionPrompts\C# Solutions AI Prompt.Solution.txt" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)ProjectPrompts\DataStructures\Merge Sorted Lists AI Prompt.Project.txt" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)ProjectPrompts\Libraries\Solutions POSIX IO AI Prompt.Project.txt" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)ProjectPrompts\DataStructures\Cache Coherent Buffer Manager AI Prompt.Project.txt" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)ProjectPrompts\DataStructures\Heap Data Structure AI Prompt.Project.txt" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)ProjectPrompts\DataStructures\Stack Data Structure AI Prompt.Project.txt" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)ProjectPrompts\DataStructures\Linked List Data Structure AI Prompt.Project.txt" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)ProjectPrompts\Microservices\HttpServer.BatchUploader AI Prompt.Project.txt" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)ProjectPrompts\Lexers\Roslyn Ai Tokenizer AI Prompt.Project.txt" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)ProjectPrompts\Lexers\Pascale Language Lexer AI Prompt.Project.txt" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)ProjectPrompts\Lexers\Python Lexer AI Prompt.Project.txt" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)ProjectPrompts\Lexers\Tiny Language Lexer AI Prompt.Project.txt" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)ProjectPrompts\Persistence\lComplete Library to provides X-base Functionality.Project.txt" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="$(MSBuildThisFileDirectory)SolutionPrompts\" />
     <Folder Include="$(MSBuildThisFileDirectory)ProjectPrompts\" />
-    <Folder Include="$(MSBuildThisFileDirectory)ProblemPrompts\" />
     <Folder Include="$(MSBuildThisFileDirectory)ProjectPrompts\" />
     <Folder Include="$(MSBuildThisFileDirectory)ProjectPrompts\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)EmbeddedPrompts.cs" />
   </ItemGroup>
 </Project>

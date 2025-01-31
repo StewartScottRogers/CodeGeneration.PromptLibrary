@@ -27,6 +27,7 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		AiPrompts.SharedProject\AiPrompts.SharedProject.projitems*{7cfbaad1-842f-4963-8963-dc1005345c49}*SharedItemsImports = 5
 		AiPrompts.SharedProject\AiPrompts.SharedProject.projitems*{f039cd17-9013-4370-8f46-1d406b983332}*SharedItemsImports = 13
 	EndGlobalSection
 EndGlobal
