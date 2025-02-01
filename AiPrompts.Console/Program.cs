@@ -1,37 +1,20 @@
-﻿using Microsoft.Extensions.Configuration;
-using System.Diagnostics;
-using System.Reflection;
+﻿using AiPrompts.LMStudioLibrary;
 
-namespace AiPrompts.Console
+namespace AiPrompts
 {
     public static class Program
     {
         static void Main(string[] args)
         {
-            string executingAssemblyLocation
-                = Assembly.GetExecutingAssembly().Location;
+            IEnumerable<string> tokens
+                = LMStudioConnection
+                    .FetchAiReplies(
+                        endpoint: "http://192.168.1.7:1232",
+                        message: "Using C# write web service."
+                    );
 
-            string currentDirectoryPath
-                = Path.GetDirectoryName(executingAssemblyLocation) ?? throw new Exception("The ExecutingAssembly Location was not found.");
-
-            IConfigurationRoot configurationRoot
-                = new ConfigurationBuilder()
-                    .SetBasePath(currentDirectoryPath)
-                        .AddJsonFile("appsettings.json", optional: true, reloadOnChange: true)
-                            .Build();
-
-            string openAIKey
-                = configurationRoot
-                    .GetSection("AppSettings:OPENAI_API_KEY")?.Value ?? throw new Exception("Please set OPENAI_API_KEY environment variable.");
-
-            string baseURL
-                = configurationRoot
-                    .GetSection("AppSettings:BASE_URL")?.Value ?? throw new Exception("Please set BASE_URL environment variable.");
-
-
-            Debug.WriteLine($"{nameof(openAIKey)}: '{openAIKey}'.");
-
-            LMStudioConnection.ConnectConsole(openAIKey).Wait();
+            foreach (string token in tokens)
+                Console.Write(token);
         }
     }
 }

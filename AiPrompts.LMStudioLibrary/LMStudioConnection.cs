@@ -1,50 +1,47 @@
-﻿using AutoGen;
-using AutoGen.Core;
+﻿using AutoGen.Core;
 using AutoGen.OpenAI;
 using AutoGen.OpenAI.Extension;
 using OpenAI;
+using System;
+using System.ClientModel;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace AiPrompts
+namespace AiPrompts.LMStudioLibrary
 {
     public static class LMStudioConnection
     {
-
-        public static async Task ConnectConsole(string openAIKey, string model = "gpt-4o-mini")
+        public static IEnumerable<string> FetchAiReplies(string endpoint, string message)
         {
-            //string openAIKey
-            //    = Environment.GetEnvironmentVariable("OPENAI_API_KEY") ?? throw new Exception("Please set OPENAI_API_KEY environment variable.");
 
-            var openAIClient
-                = new OpenAIClient(openAIKey);
+            OpenAIClient openAIClient
+               = new OpenAIClient(
+                   new ApiKeyCredential("api-key"),
+                   new OpenAIClientOptions { Endpoint = new Uri(endpoint), }
+               );
 
-            MiddlewareStreamingAgent<OpenAIChatAgent> assistantAgent =
+            MiddlewareStreamingAgent<OpenAIChatAgent> openAIChatAgent =
                 new OpenAIChatAgent(
-                    name: "assistant",
-                    systemMessage: "You are an assistant that help user to do some tasks.",
-                    chatClient: openAIClient.GetChatClient(model)
+                    name: "Software Engineer",
+                    systemMessage: "You Write Code.",
+                    chatClient: openAIClient
+                                    .GetChatClient("deepseek-r1-distill-llama-8b")
                 )
-                .RegisterMessageConnector()
-                    .RegisterPrintMessage(); // register a hook to print message nicely to console
+                .RegisterMessageConnector();
+
+            IAsyncEnumerable<IMessage> tokens
+                = openAIChatAgent
+                    .GenerateStreamingReplyAsync(new[] { new TextMessage(Role.User, message) });
 
 
-            // set human input mode to ALWAYS so that user always provide input
-            MiddlewareAgent<UserProxyAgent> userProxyAgent 
-                = new UserProxyAgent(
-                    name: "user",
-                    humanInputMode: HumanInputMode.ALWAYS
-                )
-                .RegisterPrintMessage();
+            foreach (IMessage token in tokens.ToBlockingEnumerable())
+            {
+                string messageContent
+                    = token
+                        .GetContent();
 
-            // start the conversation
-            await userProxyAgent.InitiateChatAsync(
-                receiver: assistantAgent,
-                message: "Hey assistant, please do me a favor.",
-                maxRound: 10
-            );
-
+                yield return messageContent;
+            }
         }
-
-
     }
 }
