@@ -25,7 +25,9 @@ namespace AiPrompts.LMStudioLibrary
                     name: "Software Engineer",
                     systemMessage: "You Write Code.",
                     chatClient: openAIClient
-                                    .GetChatClient("deepseek-r1-distill-llama-8b")
+                                    .GetChatClient("phi-4")
+                                                //("qwen2.5-coder-32b-instruct") 
+                                                //("deepseek-r1-distill-llama-8b")
                 )
                 .RegisterMessageConnector();
 
