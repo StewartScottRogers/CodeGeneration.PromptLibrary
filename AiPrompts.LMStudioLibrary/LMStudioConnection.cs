@@ -1,4 +1,5 @@
 ﻿using AutoGen.Core;
+using AutoGen.DotnetInteractive;
 using AutoGen.OpenAI;
 using AutoGen.OpenAI.Extension;
 using OpenAI;
@@ -6,17 +7,19 @@ using System;
 using System.ClientModel;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using Microsoft.DotNet.Interactive;
+using System.Linq;
+using AutoGen.DotnetInteractive.Extension;
 
 namespace AiPrompts.LMStudioLibrary
 {
     public static class LMStudioConnection
     {
-        public static IEnumerable<string> FetchAiReplies(string endpoint, string message)
+        public static IEnumerable<string> FetchAiReplies(string endpoint, string aiModel, string message, string apiKey = "api-key-does-not-mater-for-lmstudio")
         {
-
             OpenAIClient openAIClient
                = new OpenAIClient(
-                   new ApiKeyCredential("api-key"),
+                   new ApiKeyCredential(apiKey),
                    new OpenAIClientOptions { Endpoint = new Uri(endpoint), }
                );
 
@@ -24,27 +27,50 @@ namespace AiPrompts.LMStudioLibrary
                 new OpenAIChatAgent(
                     name: "Software Engineer",
                     systemMessage: "You Write Code.",
-                    chatClient: openAIClient
-                                    .GetChatClient("mistral-small-24b-instruct-2501")
-                                                //("phi-4")
-                                                //("qwen2.5-coder-32b-instruct") 
-                                                //("deepseek-r1-distill-llama-8b")
-                )
-                .RegisterMessageConnector();
+                    chatClient: openAIClient.GetChatClient(aiModel)
+                ).RegisterMessageConnector();
 
-            IAsyncEnumerable<IMessage> tokens
-                = openAIChatAgent
-                    .GenerateStreamingReplyAsync(new[] { new TextMessage(Role.User, message) });
+            //CompositeKernel compositeKernel
+            //   = DotnetInteractiveKernelBuilder
+            //       .CreateDefaultInProcessKernelBuilder() // add C# and F# kernels
+            //           .Build();
 
+            //MiddlewareAgent<MiddlewareStreamingAgent<OpenAIChatAgent>> dotnetInteractiveMiddlewareAgent =
+            //    openAIChatAgent
+            //        .RegisterMiddleware(async (message, generateReplyOptions, innerAgent, cancellationToken) =>
+            //            {
+            //                IMessage lastMessage
+            //                   = message.LastOrDefault();
 
-            foreach (IMessage token in tokens.ToBlockingEnumerable())
-            {
-                string messageContent
-                    = token
-                        .GetContent();
+            //                if (lastMessage == null || lastMessage.GetContent() is null)
+            //                    return await innerAgent.GenerateReplyAsync(message, generateReplyOptions, cancellationToken);
 
-                yield return messageContent;
-            }
+            //                if (lastMessage.ExtractCodeBlock("```csharp", "```") is string codeSnippet)
+            //                {
+            //                    // execute code snippet
+            //                    string result
+            //                       = await compositeKernel.RunSubmitCodeCommandAsync(codeSnippet, "csharp");
+
+            //                    return new TextMessage(Role.Assistant, result, from: openAIChatAgent.Name);
+            //                }
+            //                else
+            //                {
+            //                    // no code block found, invoke next agent
+            //                    return await innerAgent.GenerateReplyAsync(message, generateReplyOptions, cancellationToken);
+            //                }
+            //            }
+            //        );
+
+            IEnumerable<string> tokens =
+                openAIChatAgent
+                    .GenerateStreamingReplyAsync(
+                        new[] {
+                            new TextMessage(Role.User, message)
+                        }
+                    ).ToBlockingEnumerable()
+                        .Select(token => token.GetContent());
+
+            return tokens;
         }
     }
 }
