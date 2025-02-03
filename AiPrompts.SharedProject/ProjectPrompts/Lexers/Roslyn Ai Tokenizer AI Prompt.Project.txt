@@ -65,7 +65,7 @@ Deliver the solution as a Visual Studio project directory containing:
 
 ----------------------------------------------------------------------------------------------------------------------------
 
-Use the C# Roslyn Compiler to create an Abstract Syntax Tree that includes all metadata.
+Use the C# Roslyn Compiler to create an Abstract Syntax Tree that includes all meta-data.
 Generate a Abstract Syntax Tree Pretty Printer.
 Generate an AST to code Reflow Generator in order to build and execute the generated code using Roslyn
 Generate 25 Unit Tests for lexing the Abstract Syntax Tree.
