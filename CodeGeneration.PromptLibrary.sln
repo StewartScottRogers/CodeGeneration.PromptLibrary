@@ -16,7 +16,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AiPrompts.LMStudioLibrary",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AiPrompts.Console", "AiPrompts.Console\AiPrompts.Console.csproj", "{9E5C610F-97E8-4A28-A6C2-7A5517087949}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AiPrompts.LMStudio", "AiPrompts.ConnectionLibrary\AiPrompts.LMStudio.csproj", "{964FC4A5-EA8D-4E33-8837-0843B74A3F6B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AiPrompts.LMStudio", "AiPrompts.LMStudio\AiPrompts.LMStudio.csproj", "{8B08ED63-81C0-4B8E-9822-2CA378BBDB42}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -36,10 +36,10 @@ Global
 		{9E5C610F-97E8-4A28-A6C2-7A5517087949}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9E5C610F-97E8-4A28-A6C2-7A5517087949}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9E5C610F-97E8-4A28-A6C2-7A5517087949}.Release|Any CPU.Build.0 = Release|Any CPU
-		{964FC4A5-EA8D-4E33-8837-0843B74A3F6B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{964FC4A5-EA8D-4E33-8837-0843B74A3F6B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{964FC4A5-EA8D-4E33-8837-0843B74A3F6B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{964FC4A5-EA8D-4E33-8837-0843B74A3F6B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8B08ED63-81C0-4B8E-9822-2CA378BBDB42}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8B08ED63-81C0-4B8E-9822-2CA378BBDB42}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8B08ED63-81C0-4B8E-9822-2CA378BBDB42}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8B08ED63-81C0-4B8E-9822-2CA378BBDB42}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
