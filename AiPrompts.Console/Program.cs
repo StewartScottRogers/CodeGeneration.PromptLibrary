@@ -1,5 +1,4 @@
 ﻿using AiPrompts.LMStudioLibrary;
-using System.CodeDom;
 
 namespace AiPrompts
 {
@@ -11,12 +10,12 @@ namespace AiPrompts
     {
         static void Main(string[] args)
         {
-            IEnumerable<string> tokens
+            TokenShuttle tokenShuttle
                 = LMStudioConnection
                     .FetchAiReplies(
                         endpoint: "http://192.168.1.7:1232",
-                        aiModel: "deepseek-r1-distill-llama-8b",
-                        message: "Using C# write web service."
+                        aiModel: "qwen2.5-coder-32b-instruct",
+                        message: "Use C# to write out the Fibonacci series. "
                     );
 
             ConsoleColor InitalBackgoundColor = Console.BackgroundColor;
@@ -24,7 +23,7 @@ namespace AiPrompts
             {
 
                 long index = 0;
-                foreach (string token in tokens)
+                foreach (string token in tokenShuttle)
                 {
                     WriteToken(index, token);
                     index++;
@@ -34,6 +33,18 @@ namespace AiPrompts
             {
                 Console.BackgroundColor = InitalBackgoundColor;
             }
+
+            Console.WriteLine();
+            Console.WriteLine(new string('-', 80));
+            string input = tokenShuttle.ToString();
+            Console.WriteLine(input);
+            Console.WriteLine();
+            Console.WriteLine(new string('-', 80));
+            string output = tokenShuttle.Compile();
+            Console.WriteLine();
+            Console.WriteLine(output);
+            Console.WriteLine();
+            Console.WriteLine(new string('-', 80));
         }
 
 
