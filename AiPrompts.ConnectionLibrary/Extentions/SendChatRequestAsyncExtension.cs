@@ -1,15 +1,20 @@
+using AiPrompts.LMStudio;
+using System;
+using System.IO;
+using System.Net.Http;
 using System.Text;
 using System.Text.Json;
+using System.Threading.Tasks;
 
-namespace AiPrompts.ConnectionLibrary
+namespace AiPrompts.LMStudio.Extentions
 {
-    public static class LMStudioSingletonExtensions
+    public static class SendChatRequestAsyncExtension
     {
         public static async Task<string> SendChatRequestAsync(this LMStudioSingleton lmStudioSingletonInstance, string prompt, Action<string> onMessageReceived, string baseUrl = "http://localhost:1234", string model = "default")
         {
             var requestBodyTuple = new
             {
-                model = model,
+                model,
                 messages = new[]
                 {
                     new
@@ -48,7 +53,7 @@ namespace AiPrompts.ConnectionLibrary
 
             while (!streamReader.EndOfStream)
             {
-                string? line = await streamReader.ReadLineAsync();
+                string line = await streamReader.ReadLineAsync();
                 if (!string.IsNullOrWhiteSpace(line))
                 {
                     stringBuilder.AppendLine(line);
@@ -58,18 +63,5 @@ namespace AiPrompts.ConnectionLibrary
 
             return stringBuilder.ToString();
         }
-
-        public static async Task<string> GetModelsAsync(this LMStudioSingleton lmStudioSingletonInstance, string baseUrl = "http://localhost:1234")
-        {
-            HttpResponseMessage httpResponseMessage
-                = await lmStudioSingletonInstance
-                    .HttpClient.GetAsync($"{baseUrl}/v1/models");
-
-            if (!httpResponseMessage.IsSuccessStatusCode)
-                throw new Exception($"API request failed: {httpResponseMessage.StatusCode}");
-
-            return await httpResponseMessage.Content.ReadAsStringAsync();
-        }
     }
 }
-

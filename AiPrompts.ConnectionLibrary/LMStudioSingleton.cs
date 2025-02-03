@@ -1,13 +1,12 @@
-﻿using System.Text;
-using System.Text.Json;
+﻿using System.Net.Http;
 
-namespace AiPrompts.ConnectionLibrary
+namespace AiPrompts.LMStudio
 {
     public class LMStudioSingleton
     {
         private static readonly object SyncLock = new object();
 
-        private static LMStudioSingleton? LMStudioSingletonInstance { get; set; }
+        private static LMStudioSingleton LMStudioSingletonInstance { get; set; }
 
         public readonly HttpClient HttpClient;
 
