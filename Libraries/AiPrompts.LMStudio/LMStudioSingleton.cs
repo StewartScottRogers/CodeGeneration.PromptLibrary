@@ -1,36 +1,14 @@
 ﻿using System.Net.Http;
 
-namespace AiPrompts.LMStudio
+namespace AiPrompts
 {
-    public class LMStudioSingleton
+    public static class LMStudioSingleton
     {
-        private static readonly object SyncLock = new object();
+        public static HttpClient HttpClient { get; private set; }
 
-        private static LMStudioSingleton LMStudioSingletonInstance { get; set; }
-
-        public readonly HttpClient HttpClient;
-
-        private LMStudioSingleton()
+        static LMStudioSingleton()
         {
             HttpClient = new HttpClient();
-        }
-
-        public static LMStudioSingleton Instance
-        {
-            get
-            {
-                if (LMStudioSingletonInstance == null)
-                {
-                    lock (SyncLock)
-                    {
-                        if (LMStudioSingletonInstance == null)
-                        {
-                            LMStudioSingletonInstance = new LMStudioSingleton();
-                        }
-                    }
-                }
-                return LMStudioSingletonInstance;
-            }
         }
     }
 }

@@ -2,7 +2,7 @@
 using System.Linq;
 using System.Text.RegularExpressions;
 
-namespace AiPrompts.LMStudio.Extentions
+namespace AiPrompts
 {
     public static class ExtractCodeBlocksFromMessageExtentions
     {
@@ -22,7 +22,7 @@ namespace AiPrompts.LMStudio.Extentions
                     .Matches(text, pattern)
                         .Select(
                             match =>
-                                (match.Groups[0].Value)
+                                match.Groups[0].Value
                                     .TrimStart(codeBlockPrefix.ToCharArray())
                                         .TrimEnd(codeBlockSuffix.ToCharArray())
                         );
