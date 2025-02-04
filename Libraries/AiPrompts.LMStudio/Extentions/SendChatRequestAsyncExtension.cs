@@ -1,3 +1,4 @@
+using AiPrompts.LMStudio;
 using System;
 using System.IO;
 using System.Net.Http;
@@ -5,16 +6,11 @@ using System.Text;
 using System.Text.Json;
 using System.Threading.Tasks;
 
-namespace AiPrompts
+namespace AiPrompts.LMStudio.Extentions
 {
     public static class SendChatRequestAsyncExtension
     {
-        public static async Task<string> SendChatRequestAsync(
-            this HttpClient httpClient,
-            string prompt,
-            string baseUrl = "http://localhost:1234",
-            string model = "default"
-        )
+        public static async Task<string> SendChatRequestAsync(this LMStudioSingleton lmStudioSingletonInstance, string prompt, Action<string> onMessageReceived, string baseUrl = "http://localhost:1234", string model = "default")
         {
             var requestBodyTuple = new
             {
@@ -37,11 +33,12 @@ namespace AiPrompts
                 );
 
             using var httpResponseMessage
-                = await httpClient
-                    .PostAsync(
-                        $"{baseUrl}/v1/chat/completions",
-                        jsonRequestBodyStringContent
-                    );
+                = await lmStudioSingletonInstance
+                    .HttpClient
+                        .PostAsync(
+                            $"{baseUrl}/v1/chat/completions",
+                            jsonRequestBodyStringContent
+                        );
 
             if (!httpResponseMessage.IsSuccessStatusCode)
                 throw new Exception($"API request failed: {httpResponseMessage.StatusCode}");
@@ -60,7 +57,7 @@ namespace AiPrompts
                 if (!string.IsNullOrWhiteSpace(line))
                 {
                     stringBuilder.AppendLine(line);
-                    //onMessageReceived(line);
+                    onMessageReceived(line);
                 }
             }
 
